@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      thead {
+        background-color: #008cba;
+        color: #ffffff;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ccc;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f4f4f4;
+      }
+
+      a {
+        color: #008cba;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome, Bishnu Aryal</h1>
+      <h2>Enrolled Courses</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course Name</th>
+            <th>Instructor</th>
+            <th>Course Materials</th>
+            <th>Upcoming Online Classes</th>
+            <th>Assessments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Introduction to Computer Science</td>
+            <td>Prof. Faisal Saeed</td>
+            <td>
+              <a href="#">Lecture Notes</a> | <a href="#">Presentations</a> |
+              <a href="#">Video Lectures</a>
+            </td>
+            <td>
+              <a href="#">Class 1</a> |
+              <a href="#">Class 2</a>
+            </td>
+            <td>
+              <a href="#">Quiz 1</a> |
+              <a href="#">Assignment 1</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Data Structures and Algorithms</td>
+            <td>Prof. Stish Sarna</td>
+            <td>
+              <a href="#">Lecture Notes</a> | <a href="#">Presentations</a> |
+              <a href="#">Video Lectures</a>
+            </td>
+            <td>
+              <a href="#">Class 1</a> |
+              <a href="#">Class 2</a>
+            </td>
+            <td>
+              <a href="#">Quiz 1</a> |
+              <a href="#">Assignment 1</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Appointments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Instructor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Prof. Faisal Saeed</td>
+            <td>01/01/2023</td>
+            <td>10:00 AM</td>
+            <td>
+              <a href="#">Edit</a> |
+              <a href="#">Cancel</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="#">Schedule Appointment</a>
+      <h2>Grades</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Assessment</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Introduction to Computer Science</td>
+            <td>Quiz 1</td>
+            <td>80%</td>
+          </tr>
+          <tr>
+            <td>Introduction to Computer Science</td>
+            <td>Assignment 1</td>
+            <td>90%</td>
+          </tr>
+          <tr>
+            <td>Data Structures and Algorithms</td>
+            <td>Quiz 1</td>
+            <td>85%</td>
+          </tr>
+          <tr>
+            <td>Data Structures and Algorithms</td>
+            <td>Assignment 1</td>
+            <td>92%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

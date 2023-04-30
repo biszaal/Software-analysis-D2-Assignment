@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 80%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-item {
+        margin-bottom: 15px;
+      }
+
+      .form-item.user-type label {
+        display: block;
+        margin-top: 5px;
+      }
+
+      label {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #008cba;
+        color: #ffffff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #007399;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Login</h1>
+      <form>
+        <div class="form-item user-type">
+          <label for="user-type">Select User Type:</label>
+          <label>
+            <input type="radio" name="userType" value="admin" required />
+            Admin
+          </label>
+          <label>
+            <input type="radio" name="userType" value="lecturer" required />
+            Lecturer
+          </label>
+          <label>
+            <input type="radio" name="userType" value="student" required />
+            Student
+          </label>
+        </div>
+        <div class="form-item">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-item">
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html>

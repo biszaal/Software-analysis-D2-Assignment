@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Users</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 800px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #f4f4f4;
+      }
+
+      th {
+        font-weight: bold;
+        background-color: #f4f4f4;
+      }
+
+      .action-link {
+        color: #008cba;
+        text-decoration: none;
+        margin-right: 10px;
+      }
+
+      .action-link:hover {
+        text-decoration: underline;
+      }
+
+      .btn {
+        display: inline-block;
+        height: 40px;
+        background-color: #008cba;
+        color: #ffffff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 20px;
+      }
+
+      .btn:hover {
+        background-color: #007399;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Manage Users</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>123456</td>
+            <td>Michael Brown</td>
+            <td>michaelbrown@example.com</td>
+            <td>Student</td>
+            <td>
+              <a href="#" class="action-link">Edit</a>
+              <a href="#" class="action-link">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>789012</td>
+            <td>Emma Johnson</td>
+            <td>emmajohnson@example.com</td>
+            <td>Lecturer</td>
+            <td>
+              <a href="#" class="action-link">Edit</a>
+              <a href="#" class="action-link">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>345678</td>
+            <td>William Davis</td>
+            <td>williamdavis@example.com</td>
+            <td>Student</td>
+            <td>
+              <a href="#" class="action-link">Edit</a>
+              <a href="#" class="action-link">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>901234</td>
+            <td>Olivia Miller</td>
+            <td>oliviamiller@example.com</td>
+            <td>Lecturer</td>
+            <td>
+              <a href="#" class="action-link">Edit</a>
+              <a href="#" class="action-link">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>567890</td>
+            <td>James Wilson</td>
+            <td>jameswilson@example.com</td>
+            <td>Student</td>
+            <td>
+              <a href="#" class="action-link">Edit</a>
+              <a href="#" class="action-link">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>234567</td>
+            <td>Emily Taylor</td>
+            <td>emilytaylor@example.com</td>
+            <td>Lecturer</td>
+            <td>
+              <a href="#" class="action-link">Edit</a>
+              <a href="#" class="action-link">Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td>890123</td>
+            <td>Benjamin Moore</td>
+            <td>benjaminmoore@example.com</td>
+            <td>Student</td>
+            <td>
+              <a href="#" class="action-link">Edit</a>
+              <a href="#" class="action-link">Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="#" class="btn">Add New User</a>
+    </div>
+  </body>
+</html>

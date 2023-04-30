@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .dashboard {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+
+      .dashboard div {
+        flex: 1;
+        min-width: 200px;
+        margin: 10px;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      a {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 15px;
+        background-color: #008cba;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 3px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      a:hover {
+        background-color: #007399;
+      }
+
+      .action-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .action-buttons a {
+        flex: 1;
+        max-width: 200px;
+        text-align: center;
+        margin: 5px;
+        padding: 10px 15px;
+        border-radius: 3px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+    </style>
+    <title>Lecturer Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lecturer Dashboard</h1>
+      <h2>Welcome, Dr. Ada Lovelace</h2>
+      <div class="dashboard">
+        <div class="courses">
+          <h3>My Courses</h3>
+          <ul>
+            <li><a href="#">Introduction to Computer Science</a></li>
+            <li><a href="#">Data Structures and Algorithms</a></li>
+          </ul>
+        </div>
+        <div class="appointments">
+          <h3>My Appointments</h3>
+          <ul>
+            <li>Consultation with Alice: April 30, 2023, 2:00 PM</li>
+            <li>Consultation with Bob: May 2, 2023, 10:00 AM</li>
+          </ul>
+        </div>
+        <div class="course-stats">
+          <h3>Course Statistics</h3>
+          <ul>
+            <li>Average Scores</li>
+            <li>Pass Rates</li>
+            <li>Individual Student Progress</li>
+          </ul>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <a href="#">Create New Course</a>
+        <a href="#">Schedule Online Class</a>
+        <a href="#">Upload Course Materials</a>
+        <a href="#">Create Assessments</a>
+        <a href="#">Set Availability</a>
+      </div>
+    </div>
+  </body>
+</html>
