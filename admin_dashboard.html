@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -17,7 +18,7 @@
 
       .container {
         width: 90%;
-        max-width: 800px;
+        max-width: 1000px;
         padding: 40px;
         background-color: #ffffff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -27,51 +28,51 @@
       h1 {
         text-align: center;
         font-size: 2.5rem;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         color: #37474f;
       }
 
       h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         margin-bottom: 30px;
-        color: #455a64;
+        color: #546e7a;
       }
 
       .dashboard {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
         margin-bottom: 30px;
       }
 
-      .dashboard div {
-        flex: 1;
-        min-width: 250px;
-        margin: 10px;
-      }
-
       h3 {
-        margin-bottom: 10px;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #455a64;
       }
 
       ul {
         list-style-type: none;
         padding: 0;
+        margin: 0;
       }
 
       li {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        color: #607d8b;
       }
 
       a {
         display: inline-block;
         margin: 5px;
-        padding: 10px 15px;
+        padding: 12px 20px;
         background-color: #4caf50;
         color: #ffffff;
         text-decoration: none;
-        border-radius: 3px;
-        font-size: 16px;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s;
       }
 
       a:hover {
@@ -84,42 +85,48 @@
         justify-content: center;
       }
     </style>
-    <title>Lecturer Dashboard</title>
   </head>
   <body>
     <div class="container">
-      <h1>Lecturer Dashboard</h1>
-      <h2>Welcome, Dr. Ada Lovelace</h2>
+      <h1>Admin Dashboard</h1>
+      <h2>Welcome, Admin</h2>
       <div class="dashboard">
         <div class="courses">
-          <h3>My Courses</h3>
+          <h3>Recent Courses</h3>
           <ul>
             <li><a href="#">Introduction to Computer Science</a></li>
             <li><a href="#">Data Structures and Algorithms</a></li>
+            <li><a href="#">Operating Systems</a></li>
+            <li><a href="#">Computer Networks</a></li>
+            <li><a href="#">Artificial Intelligence</a></li>
           </ul>
         </div>
-        <div class="appointments">
-          <h3>My Appointments</h3>
+        <div class="lecturers">
+          <h3>Recent Lecturers</h3>
           <ul>
-            <li>Consultation with Alice: April 30, 2023, 2:00 PM</li>
-            <li>Consultation with Bob: May 2, 2023, 10:00 AM</li>
+            <li>Dr. Alice Johnson</li>
+            <li>Prof. Bob Smith</li>
+            <li>Dr. Carol Williams</li>
+            <li>Prof. David Brown</li>
+            <li>Dr. Evelyn Clark</li>
           </ul>
         </div>
-        <div class="course-stats">
-          <h3>Course Statistics</h3>
+        <div class="stats">
+          <h3>University Statistics</h3>
           <ul>
-            <li>Average Scores</li>
-            <li>Pass Rates</li>
-            <li>Individual Student Progress</li>
+            <li>Total Students: 5000</li>
+            <li>Total Lecturers: 150</li>
+            <li>Overall Pass Rate: 92%</li>
+            <li>Number of Courses: 80</li>
           </ul>
         </div>
       </div>
       <div class="action-buttons">
-        <a href="#">Create New Course</a>
-        <a href="#">Schedule Online Class</a>
-        <a href="#">Upload Course Materials</a>
-        <a href="#">Create Assessments</a>
-        <a href="#">Set Availability</a>
+        <a href="#">Manage Courses</a>
+        <a href="#">Manage Lecturers</a>
+        <a href="#">Manage Students</a>
+        <a href="#">View Reports</a>
+        <a href="#">Settings</a>
       </div>
     </div>
   </body>

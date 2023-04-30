@@ -6,7 +6,7 @@
     <title>Upload Assessment</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
@@ -17,16 +17,24 @@
       }
 
       .container {
-        width: 500px;
-        padding: 20px;
+        width: 90%;
+        max-width: 600px;
+        padding: 40px;
         background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
       }
 
       h1 {
         text-align: center;
-        margin-bottom: 20px;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #37474f;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
       }
 
       .form-item {
@@ -44,24 +52,24 @@
       input[type="file"],
       select {
         padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        width: 100%;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
       }
 
-      button[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        background-color: #008cba;
+      button {
+        padding: 12px 20px;
+        background-color: #4caf50;
         color: #ffffff;
+        font-size: 1rem;
         border: none;
-        border-radius: 3px;
+        border-radius: 5px;
         cursor: pointer;
-        font-size: 16px;
+        transition: background-color 0.3s;
       }
 
-      button[type="submit"]:hover {
-        background-color: #007399;
+      button:hover {
+        background-color: #3f9048;
       }
     </style>
   </head>

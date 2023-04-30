@@ -6,25 +6,37 @@
     <title>View Assessments</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
 
       .container {
         width: 90%;
         max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
+        padding: 40px;
         background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
       }
 
       h1 {
         text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #37474f;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 2rem;
         margin-bottom: 20px;
+        color: #37474f;
       }
 
       table {
@@ -33,40 +45,46 @@
         margin-bottom: 20px;
       }
 
-      thead {
-        background-color: #008cba;
-        color: #ffffff;
-      }
-
       th,
       td {
         padding: 10px;
-        text-align: left;
         border: 1px solid #ccc;
+        text-align: left;
       }
 
-      tbody tr:nth-child(even) {
-        background-color: #f4f4f4;
+      th {
+        font-weight: bold;
       }
 
-      a {
-        color: #008cba;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      form {
-        margin-bottom: 20px;
-      }
-
-      label,
-      input,
-      select {
+      label {
+        font-weight: bold;
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+      }
+
+      select,
+      input[type="file"],
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        padding: 10px;
+        background-color: #4caf50;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3f9048;
       }
     </style>
   </head>
@@ -111,17 +129,14 @@
           <option value="dsa">Data Structures and Algorithms</option>
           <option value="os">Operating Systems</option>
         </select>
-        <br />
         <label for="assessment">Assessment:</label>
         <select name="assessment" id="assessment">
           <option value="quiz1">Quiz 1</option>
           <option value="assignment1">Assignment 1</option>
           <option value="project1">Project 1</option>
         </select>
-        <br />
         <label for="file">Select file:</label>
         <input type="file" name="file" id="file" />
-        <br />
         <input type="submit" value="Submit Assessment" />
       </form>
     </div>

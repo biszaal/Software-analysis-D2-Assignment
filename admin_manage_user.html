@@ -6,7 +6,7 @@
     <title>Manage Users</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
@@ -17,16 +17,19 @@
       }
 
       .container {
-        width: 800px;
-        padding: 20px;
+        width: 90%;
+        max-width: 1000px;
+        padding: 40px;
         background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
       }
 
       h1 {
         text-align: center;
+        font-size: 2.5rem;
         margin-bottom: 20px;
+        color: #37474f;
       }
 
       table {
@@ -35,20 +38,24 @@
         margin-bottom: 20px;
       }
 
-      th,
-      td {
-        padding: 10px;
-        text-align: left;
-        border-bottom: 1px solid #f4f4f4;
+      thead {
+        background-color: #4caf50;
+        color: #ffffff;
       }
 
-      th {
-        font-weight: bold;
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #ccc;
+      }
+
+      tbody tr:nth-child(even) {
         background-color: #f4f4f4;
       }
 
       .action-link {
-        color: #008cba;
+        color: #4caf50;
         text-decoration: none;
         margin-right: 10px;
       }
@@ -59,21 +66,18 @@
 
       .btn {
         display: inline-block;
-        height: 40px;
-        background-color: #008cba;
+        margin: 5px;
+        padding: 12px 20px;
+        background-color: #4caf50;
         color: #ffffff;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 16px;
-        padding: 10px 20px;
         text-decoration: none;
-        text-align: center;
-        line-height: 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s;
       }
 
       .btn:hover {
-        background-color: #007399;
+        background-color: #3f9048;
       }
     </style>
   </head>
