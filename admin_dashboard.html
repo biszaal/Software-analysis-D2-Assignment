@@ -3,22 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar {
+        background-color: #37474f;
+        padding: 10px 20px;
+      }
+
+      .navbar a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
       }
 
       .container {
-        width: 90%;
-        max-width: 1000px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 90vw;
+        margin: 20px auto;
         padding: 40px;
         background-color: #ffffff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -28,51 +54,59 @@
       h1 {
         text-align: center;
         font-size: 2.5rem;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         color: #37474f;
+        flex-shrink: 0;
       }
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         margin-bottom: 30px;
-        color: #546e7a;
+        color: #455a64;
+        flex-shrink: 0;
       }
 
       .dashboard {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         margin-bottom: 30px;
       }
 
+      .dashboard div {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
       h3 {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-        color: #455a64;
+        margin-bottom: 10px;
       }
 
       ul {
         list-style-type: none;
         padding: 0;
-        margin: 0;
       }
 
       li {
-        margin-bottom: 8px;
-        font-size: 1rem;
-        color: #607d8b;
+        cursor: pointer;
+        margin: 5px;
+        padding: 20px;
       }
 
       a {
         display: inline-block;
         margin: 5px;
-        padding: 12px 20px;
+        padding: 10px 15px;
         background-color: #4caf50;
         color: #ffffff;
         text-decoration: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        transition: background-color 0.3s;
+        border-radius: 3px;
+        font-size: 16px;
       }
 
       a:hover {
@@ -83,16 +117,28 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .icon {
+        margin-right: 5px;
       }
     </style>
+    <title>Admin Dashboard</title>
   </head>
   <body>
+    <div class="navbar">
+      <a href="#"><i class="fas fa-home icon"></i>Dashboard</a>
+      <a href="#"><i class="fas fa-user icon"></i>Profile</a>
+      <a href="#"><i class="fas fa-cog icon"></i>Settings</a>
+      <a href="#"><i class="fas fa-sign-out-alt icon"></i>Logout</a>
+    </div>
     <div class="container">
       <h1>Admin Dashboard</h1>
       <h2>Welcome, Admin</h2>
       <div class="dashboard">
         <div class="courses">
-          <h3>Recent Courses</h3>
+          <h3><i class="fas fa-book icon"></i>Recent Courses</h3>
           <ul>
             <li><a href="#">Introduction to Computer Science</a></li>
             <li><a href="#">Data Structures and Algorithms</a></li>
@@ -102,7 +148,9 @@
           </ul>
         </div>
         <div class="lecturers">
-          <h3>Recent Lecturers</h3>
+          <h3>
+            <i class="fas fa-chalkboard-teacher icon"></i>Recent Lecturers
+          </h3>
           <ul>
             <li>Dr. Alice Johnson</li>
             <li>Prof. Bob Smith</li>
@@ -112,7 +160,7 @@
           </ul>
         </div>
         <div class="stats">
-          <h3>University Statistics</h3>
+          <h3><i class="fas fa-chart-pie icon"></i>University Statistics</h3>
           <ul>
             <li>Total Students: 5000</li>
             <li>Total Lecturers: 150</li>
@@ -122,11 +170,10 @@
         </div>
       </div>
       <div class="action-buttons">
-        <a href="#">Manage Courses</a>
-        <a href="#">Manage Lecturers</a>
-        <a href="#">Manage Students</a>
-        <a href="#">View Reports</a>
-        <a href="#">Settings</a>
+        <a href="#"><i class="fas fa-cogs icon"></i>Manage Courses</a>
+        <a href="#"><i class="fas fa-users icon"></i>Manage Users</a>
+        <a href="#"><i class="fas fa-file-alt icon"></i>View Reports</a>
+        <a href="#"><i class="fas fa-wrench icon"></i>Settings</a>
       </div>
     </div>
   </body>

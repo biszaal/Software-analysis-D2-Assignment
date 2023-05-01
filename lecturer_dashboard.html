@@ -3,21 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+      }
+
+      .navbar {
+        background-color: #37474f;
+        padding: 10px 20px;
+      }
+
+      .navbar a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
       }
 
       .container {
-        width: 90%;
-        max-width: 800px;
+        width: 100%;
+        max-width: 90vw;
+        margin: 20px auto;
         padding: 40px;
         background-color: #ffffff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -48,6 +64,10 @@
         flex: 1;
         min-width: 250px;
         margin: 10px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
       }
 
       h3 {
@@ -60,7 +80,9 @@
       }
 
       li {
-        margin-bottom: 5px;
+        cursor: pointer;
+        margin: 5px;
+        padding: 20px;
       }
 
       a {
@@ -83,43 +105,61 @@
         flex-wrap: wrap;
         justify-content: center;
       }
+
+      .icon {
+        margin-right: 5px;
+      }
     </style>
     <title>Lecturer Dashboard</title>
   </head>
   <body>
+    <div class="navbar">
+      <a href="#"><i class="fas fa-home icon"></i>Dashboard</a>
+      <a href="#"><i class="fas fa-user icon"></i>Profile</a>
+      <a href="#"><i class="fas fa-cog icon"></i>Settings</a>
+      <a href="#"><i class="fas fa-sign-out-alt icon"></i>Logout</a>
+    </div>
     <div class="container">
       <h1>Lecturer Dashboard</h1>
       <h2>Welcome, Dr. Ada Lovelace</h2>
       <div class="dashboard">
         <div class="courses">
-          <h3>My Courses</h3>
+          <h3><i class="fas fa-book icon"></i>My Courses</h3>
           <ul>
             <li><a href="#">Introduction to Computer Science</a></li>
             <li><a href="#">Data Structures and Algorithms</a></li>
+            <li><a href="#">Advanced Operating Systems</a></li>
+            <li><a href="#">Machine Learning</a></li>
           </ul>
         </div>
         <div class="appointments">
-          <h3>My Appointments</h3>
+          <h3><i class="fas fa-calendar-alt icon"></i>My Appointments</h3>
           <ul>
             <li>Consultation with Alice: April 30, 2023, 2:00 PM</li>
             <li>Consultation with Bob: May 2, 2023, 10:00 AM</li>
+            <li>Consultation with Carol: May 4, 2023, 11:00 AM</li>
+            <li>Consultation with Dave: May 6, 2023, 1:00 PM</li>
           </ul>
         </div>
         <div class="course-stats">
-          <h3>Course Statistics</h3>
+          <h3><i class="fas fa-chart-bar icon"></i>Course Statistics</h3>
           <ul>
             <li>Average Scores</li>
             <li>Pass Rates</li>
             <li>Individual Student Progress</li>
+            <li>Course Evaluations</li>
+            <li>Student Feedback</li>
           </ul>
         </div>
       </div>
       <div class="action-buttons">
-        <a href="#">Create New Course</a>
-        <a href="#">Schedule Online Class</a>
-        <a href="#">Upload Course Materials</a>
-        <a href="#">Create Assessments</a>
-        <a href="#">Set Availability</a>
+        <a href="#"><i class="fas fa-plus icon"></i>Create New Course</a>
+        <a href="#"><i class="fas fa-video icon"></i>Schedule Online Class</a>
+        <a href="#"
+          ><i class="fas fa-upload icon"></i>Upload Course Materials</a
+        >
+        <a href="#"><i class="fas fa-tasks icon"></i>Create Assessments</a>
+        <a href="#"><i class="fas fa-clock icon"></i>Set Availability</a>
       </div>
     </div>
   </body>

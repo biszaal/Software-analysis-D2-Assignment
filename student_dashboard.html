@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -15,13 +19,34 @@
         height: 100vh;
       }
 
+      .navbar {
+        background-color: #37474f;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
+      }
+
       .container {
-        width: 90%;
-        max-width: 1000px;
+        width: 100%;
+        max-width: 90vw;
         padding: 40px;
         background-color: #ffffff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
+        margin-top: 60px;
       }
 
       h1 {
@@ -47,7 +72,7 @@
       td {
         padding: 8px;
         text-align: left;
-        border-bottom: 1px solid #ccc;
+        border: 1px solid #ccc;
       }
 
       th {
@@ -55,17 +80,37 @@
         font-weight: bold;
       }
 
+      tbody tr:nth-child(odd) {
+        background-color: #f4f4f4;
+      }
+
       a {
-        color: #4caf50;
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: #ffffff;
         text-decoration: none;
+        border-radius: 3px;
+        font-size: 16px;
       }
 
       a:hover {
-        text-decoration: underline;
+        background-color: #3f9048;
+      }
+
+      .icon {
+        margin-right: 5px;
       }
     </style>
   </head>
   <body>
+    <div class="navbar">
+      <a href="#"><i class="fas fa-home icon"></i>Dashboard</a>
+      <a href="#"><i class="fas fa-user icon"></i>Profile</a>
+      <a href="#"><i class="fas fa-cog icon"></i>Settings</a>
+      <a href="#"><i class="fas fa-sign-out-alt icon"></i>Logout</a>
+    </div>
     <div class="container">
       <h1>Welcome, Bishnu Aryal</h1>
       <h2>Enrolled Courses</h2>
@@ -84,32 +129,50 @@
             <td>Introduction to Computer Science</td>
             <td>Prof. Faisal Saeed</td>
             <td>
-              <a href="#">Lecture Notes</a> | <a href="#">Presentations</a> |
-              <a href="#">Video Lectures</a>
+              <a href="#"><i class="fas fa-file icon"></i>Lecture Notes</a> |
+              <a href="#"
+                ><i class="fas fa-slideshare icon"></i>Presentations</a
+              >
+              |
+              <a href="#"><i class="fas fa-video icon"></i>Video Lectures</a>
             </td>
             <td>
-              <a href="#">Class 1</a> |
-              <a href="#">Class 2</a>
+              <a href="#"
+                ><i class="fas fa-chalkboard-teacher icon"></i>Class 1</a
+              >
+              |
+              <a href="#"
+                ><i class="fas fa-chalkboard-teacher icon"></i>Class 2</a
+              >
             </td>
             <td>
-              <a href="#">Quiz 1</a> |
-              <a href="#">Assignment 1</a>
+              <a href="#"><i class="fas fa-edit icon"></i>Quiz 1</a> |
+              <a href="#"><i class="fas fa-file-alt icon"></i>Assignment 1</a>
             </td>
           </tr>
           <tr>
             <td>Data Structures and Algorithms</td>
             <td>Prof. Stish Sarna</td>
             <td>
-              <a href="#">Lecture Notes</a> | <a href="#">Presentations</a> |
-              <a href="#">Video Lectures</a>
+              <a href="#"><i class="fas fa-file icon"></i>Lecture Notes</a> |
+              <a href="#"
+                ><i class="fas fa-slideshare icon"></i>Presentations</a
+              >
+              |
+              <a href="#"><i class="fas fa-video icon"></i>Video Lectures</a>
             </td>
             <td>
-              <a href="#">Class 1</a> |
-              <a href="#">Class 2</a>
+              <a href="#"
+                ><i class="fas fa-chalkboard-teacher icon"></i>Class 1</a
+              >
+              |
+              <a href="#"
+                ><i class="fas fa-chalkboard-teacher icon"></i>Class 2</a
+              >
             </td>
             <td>
-              <a href="#">Quiz 1</a> |
-              <a href="#">Assignment 1 </a>
+              <a href="#"><i class="fas fa-edit icon"></i>Quiz 1</a> |
+              <a href="#"><i class="fas fa-file-alt icon"></i>Assignment 1 </a>
             </td>
           </tr>
         </tbody>
@@ -130,13 +193,15 @@
             <td>01/01/2023</td>
             <td>10:00 AM</td>
             <td>
-              <a href="#">Edit</a> |
-              <a href="#">Cancel</a>
+              <a href="#"><i class="fas fa-edit icon"></i>Edit</a> |
+              <a href="#"><i class="fas fa-trash icon"></i>Cancel</a>
             </td>
           </tr>
         </tbody>
       </table>
-      <a href="#">Schedule Appointment</a>
+      <a href="#"
+        ><i class="fas fa-calendar-plus icon"></i>Schedule Appointment</a
+      >
       <h2>Grades</h2>
       <table>
         <thead>

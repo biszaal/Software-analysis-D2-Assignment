@@ -4,16 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upload Assessment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar {
+        background-color: #37474f;
+        padding: 10px 20px;
+      }
+
+      .navbar a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
       }
 
       .container {
@@ -23,6 +41,8 @@
         background-color: #ffffff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
+        margin: 1rem auto;
+        flex-grow: 1;
       }
 
       h1 {
@@ -45,6 +65,21 @@
 
       label {
         margin-bottom: 5px;
+      }
+
+      a {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 3px;
+        font-size: 16px;
+      }
+
+      a:hover {
+        background-color: #3f9048;
       }
 
       input[type="text"],
@@ -71,32 +106,50 @@
       button:hover {
         background-color: #3f9048;
       }
+
+      .icon {
+        margin-right: 5px;
+      }
     </style>
   </head>
   <body>
+    <div class="navbar">
+      <a href="#"><i class="fas fa-home icon"></i>Dashboard</a>
+      <a href="#"><i class="fas fa-user icon"></i>Profile</a>
+      <a href="#"><i class="fas fa-cog icon"></i>Settings</a>
+      <a href="#"><i class="fas fa-sign-out-alt icon"></i>Logout</a>
+    </div>
     <div class="container">
       <h1>Upload Assessment</h1>
       <form>
         <div class="form-item">
-          <label for="course">Course:</label>
+          <label for="course"><i class="fas fa-book"></i> Course:</label>
           <select id="course">
             <option value="course1">Introduction to Computer Science</option>
             <option value="course2">Data Structures and Algorithms</option>
           </select>
         </div>
         <div class="form-item">
-          <label for="assessment_name">Assessment Name:</label>
+          <label for="assessment_name"
+            ><i class="fas fa-file-alt"></i> Assessment Name:</label
+          >
           <input type="text" id="assessment_name" required />
         </div>
         <div class="form-item">
-          <label for="due_date">Due Date:</label>
+          <label for="due_date"
+            ><i class="fas fa-calendar"></i> Due Date:</label
+          >
           <input type="date" id="due_date" required />
         </div>
         <div class="form-item">
-          <label for="assessment_file">Assessment File:</label>
+          <label for="assessment_file"
+            ><i class="fas fa-upload"></i> Assessment File:</label
+          >
           <input type="file" id="assessment_file" required />
         </div>
-        <button type="submit">Upload Assessment</button>
+        <button type="submit">
+          <i class="fas fa-cloud-upload-alt"></i> Upload Assessment
+        </button>
       </form>
     </div>
   </body>
